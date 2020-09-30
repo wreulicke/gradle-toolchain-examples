@@ -21,10 +21,8 @@ Gradle を動かすJVMとコンパイルやテストで使うJVMを分離する�
 
 ~~前前職でJavaのアップデートしてた時に欲しかった・・・~~
 
-というわけで、gradle で Javaのリポジトリを作るところからやっていきましょう。
-
-
-今回は以下の目次でブログを書いていきます。
+というわけで、今回は、この `Toolchain support for JVM Projects` を使ってみます。
+以下の目次でブログを書いていきます。
 
 * Gradle 6.7 の Toolchain support for JVM projects を試してみる
 * gradle で Java のリポジトリを作る
@@ -35,6 +33,8 @@ Gradle を動かすJVMとコンパイルやテストで使うJVMを分離する�
 * Test/Compile だけ違うバージョンのJVMで実行も出来る
 * まとめ
 * おわりに
+
+今回は、gradle で Javaのリポジトリを作るところからやっていきましょう。
 
 ## gradle で Java のリポジトリを作る
 
