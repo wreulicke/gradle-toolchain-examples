@@ -9,3 +9,9 @@ plugins {
     // Apply the java-library plugin for API and implementation separation.
     id 'java-library'
 }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
