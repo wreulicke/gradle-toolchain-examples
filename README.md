@@ -252,7 +252,7 @@ CI環境ならtoolchain のキャッシュが必要そうですが、普段使�
 確認する方法は、`javap` を使って確認しましょう。
 ところで、バイトコードのバージョンを見るの、-vしかないんだっけ・・・
 
-```
+```bash
 $ javap -v list/build/classes/java/main/gradle/toolchain/examples/list/LinkedList.class
 Classfile /home/masaya/repo/gradle-toolchain-examples/list/build/classes/java/main/gradle/toolchain/examples/list/LinkedList.class
   Last modified 2020/10/01; size 2020 bytes
@@ -297,7 +297,7 @@ public class gradle.toolchain.examples.app.App
 debug オプションを追加してサスペンドさせて
 JVMのバージョンを確かめてみます。
 
-```
+```bash
 $ ./gradlew run --debug-jvm
 
 > Task :app:run
@@ -310,7 +310,7 @@ Listening for transport dt_socket at address: 5005
 
 VMのバージョンはjcmdで確認しましょう。
 
-```
+```bash
 $ jps
 858300 Jps
 847529 GradleWrapperMain
@@ -366,7 +366,7 @@ AdoptOpenJDKを使っていない場合でも
 また、ドキュメントによると複雑なテストやコンパイルにおけるバージョン制御も出来ます。
 ドキュメントに以下のサンプルがありました。
 
-```
+```groovy
 tasks.withType(JavaCompile).configureEach {
     javaCompiler = javaToolchains.compilerFor {
         languageVersion = JavaLanguageVersion.of(8)
