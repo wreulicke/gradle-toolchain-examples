@@ -138,7 +138,7 @@ locales-launch: Data of ja_JP locale not found, generating, please wait...
 サンプルプロジェクトの構成上、buildSrc配下のgroovyというかgradleファイルに書けば良さそうですね。
 実際に変更したのは[この部分](https://github.com/wreulicke/gradle-toolchain-examples/commit/ca4f143772543628a0038b61647c9d088f3129fc)です。
 
-gradle が Java 11であることを確認しておきます。
+gradle が Java 11で動いていることを確認しておきます。
 
 ```
 ./gradlew -v
