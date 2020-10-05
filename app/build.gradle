@@ -14,3 +14,15 @@ application {
     // Define the main class for the application.
     mainClass = 'gradle.toolchain.examples.app.App'
 }
+
+task testOnJava8(type: Test) {
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+task testOnJava15(type: Test) {
+    javaLauncher = javaToolchains.launcherFor {
+        languageVersion = JavaLanguageVersion.of(15)
+    }
+}
